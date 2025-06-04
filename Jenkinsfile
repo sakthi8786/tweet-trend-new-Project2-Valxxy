@@ -1,9 +1,10 @@
 pipeline {
+    agent any
     environment {
         PATH="/opt/apache-maven-3.9.8/bin/:$PATH"
     }
         stages {
-        stage("biuld"){
+        stage("Build"){
             steps{
                 sh 'mvn clean deploy'
             }
